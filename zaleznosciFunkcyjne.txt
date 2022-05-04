@@ -1,0 +1,57 @@
+1.
+zamówienia (id_produktu, nazwa_produktu, id_klienta, nazwa_klienta, data_zamowienia, cena_produktu, ilość, VAT, suma_brutto, suma_netto)
+id_produktu -> nazwa_produktu, cena_produktu, VAT
+nazwa_produktu -> id_produktu, cena_produktu, VAT
+id_klienta -> nazwa_klienta
+nazwa_klienta -> id_klienta
+cena_produktu, ilość -> suma_netto
+cena_produktu, ilość, VAT -> suma_brutto
+suma_brutto, VAT -> suma_netto
+suma_netto, VAT -> suma_brutto
+id_klienta, data_zamowienia, id_produktu, ilość -> nazwa produktu, nazwa_klienta, cena_produktu, VAT, suma_netto, suma_brutto
+nazwa_klienta, data_zamowienia, id_produktu, ilość -> nazwa produktu, id_klienta, cena_produktu, VAT, suma_netto, suma_brutto
+id_klienta, data_zamowienia, nazwa_produktu, ilość -> id_produktu, nazwa_klienta, cena_produktu, VAT, suma_netto, suma_brutto
+nazwa_klienta, data_zamowienia, nazwa_produktu, ilość -> id_produktu, id_klienta, cena_produktu, VAT, suma_netto, suma_brutto
+id_klienta, data_zamowienia, id_produktu, suma_netto -> nazwa produktu, nazwa_klienta, cena_produktu, ilość, VAT, suma_brutto
+nazwa_klienta, data_zamowienia, id_produktu, suma_netto -> nazwa produktu, id_klienta, cena_produktu, VAT, ilość, suma_brutto
+id_klienta, data_zamowienia, nazwa_produktu, suma_netto -> id_produktu, nazwa_klienta, cena_produktu, VAT, ilość, suma_brutto
+nazwa_klienta, data_zamowienia, nazwa_produktu, suma_netto -> id_produktu, id_klienta, cena_produktu, VAT, ilość, suma_brutto
+id_klienta, data_zamowienia, id_produktu, suma_brutto -> nazwa produktu, nazwa_klienta, cena_produktu, ilość, VAT, suma_ netto
+nazwa_klienta, data_zamowienia, id_produktu, suma_ brutto -> nazwa produktu, id_klienta, cena_produktu, VAT, ilość, suma_ netto
+id_klienta, data_zamowienia, nazwa_produktu, suma_ brutto -> id_produktu, nazwa_klienta, cena_produktu, VAT, ilość, suma_ netto
+nazwa_klienta, data_zamowienia, nazwa_produktu, suma_ brutto -> id_produktu, id_klienta, cena_produktu, VAT, ilość, suma_netto
+
+
+suma_netto, ilość -> cena_produktu
+suma_brutto, ilość, VAT -> cena_produktu
+cena_produktu, suma_netto -> ilość
+cena_produktu, suma_brutto, VAT  -> ilość
+id_produktu, suma_netto -> ilość
+id_produktu, suma_brutto -> ilość
+nazwa_produktu, suma_netto -> ilość
+nazwa_produktu, suma_brutto -> ilość
+id_produktu, ilość -> suma_netto
+id_produktu, ilość -> suma_brutto
+nazwa_produktu, ilość -> suma_netto
+nazwa_produktu, ilość -> suma_brutto
+
+
+
+2.
+Klucz główny:
+id_klienta + data_zamowienia + id_produktu
+nazwa_klienta + data_zamowienia + id_produktu
+id_klienta + data_zamowienia + nazwa_produktu
+nazwa_klienta + data_zamowienia + nazwa_produktu
+
+
+
+3.
+pomieszczenia(id_pomieszczenia, numer_pomieszczenia, id_budynku, powierzchnia, liczba_okien, liczba_drzwi, ulica, miasto, kod_pocztowy)
+id_pomieszczenia -> numer_pomieszczenia, id_budynku, powierzchnia, liczba_okien, liczba_drzwi, ulica, miasto, kod_pocztowy
+id_budynku -> ulica, miasto, kod_pocztowy
+numer_pomieszczenia, id_budynku -> id_pomieszczenia, powierzchnia, liczba_okien, liczba_drzwi, ulica, miasto, kod_pocztowy
+
+Klucz główny:
+id_pomieszczenia
+numer_pomieszczenia + id_budynku
